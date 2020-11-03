@@ -203,8 +203,7 @@ async function editarEstabelecimento(item) {
                 cache: 'default',
                 body: JSON.stringify(item)};
 
-    //const URL = 'http://18.229.127.212:8009/api/v1/estabelecimento/'+item.id;
-    const URL = 'https://localhost:44377/api/v1/estabelecimento/'+item.id;
+    const URL = 'http://18.229.127.212:8009/api/v1/estabelecimento/'+item.id;
     const resposta = await fetch(URL, myInit);
     return resposta;
 }
