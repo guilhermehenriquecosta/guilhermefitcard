@@ -1,7 +1,6 @@
 $(document).ready(function(){
     document.getElementById("carregandoTodas").style.display = '';
-    $('#uname').mask('000-0');
-
+    
     limparListagem();
     iniciarCategorias();
 });

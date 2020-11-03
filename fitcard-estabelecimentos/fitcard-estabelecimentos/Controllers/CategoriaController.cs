@@ -3,7 +3,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using fitcard_estabelecimentos.data.Repository;
 using fitcard_estabelecimentos.domain.Domain;
-using fitcard_estabelecimentos.domain.Domain.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -59,8 +58,7 @@ namespace fitcard_estabelecimentos.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-                //return BadRequest(new ApiBadRequestResponse(ModelState));
-
+                
             var id = await _categoriaRepository.Insere(categoria);
             
             categoria.Id = id;
@@ -81,8 +79,7 @@ namespace fitcard_estabelecimentos.Controllers
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-                //return BadRequest(new ApiBadRequestResponse(ModelState));
-
+                
             var qtdlinhasAfetadas = await _categoriaRepository.Edita(categoria);
             if (qtdlinhasAfetadas != 1)
                 return NotFound();

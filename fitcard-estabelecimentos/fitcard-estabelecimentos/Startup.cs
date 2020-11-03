@@ -37,7 +37,6 @@ namespace fitcard_estabelecimentos
 
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddTransient<IEstabelecimentoRepository, EstabelecimentoRepository>();
-            services.AddTransient<IEstabelecimentoRepository, EstabelecimentoRepository>();
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
             services.Configure<ApiBehaviorOptions>(options =>

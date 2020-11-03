@@ -28,7 +28,8 @@ namespace fitcard_estabelecimentos.data.Repository
                         "c.id 'Categoria_id', c.nome 'Categoria_nome', c.dataCriacao 'Categoria_dataCriacao', c.dataEdicao 'Categoria_dataEdicao', c.excluido 'Categoria_excluido' " +                        
                         "FROM dbo.Estabelecimento e " +
                         "LEFT JOIN dbo.Categoria c on c.id = e.idCategoria AND c.excluido = 0 " +
-                        "WHERE e.excluido = 0";
+                        "WHERE e.excluido = 0" + 
+                        "ORDER BY 3";
             var estabelecimentos = await conexao.QueryAsync<dynamic>(sql);
 
             AutoMapper.Configuration.AddIdentifier(typeof(Estabelecimento), "id");
@@ -47,7 +48,8 @@ namespace fitcard_estabelecimentos.data.Repository
                         "c.id 'Categoria_id', c.nome 'Categoria_nome', c.dataCriacao 'Categoria_dataCriacao', c.dataEdicao 'Categoria_dataEdicao', c.excluido 'Categoria_excluido' " +
                         "FROM dbo.Estabelecimento e " +
                         "LEFT JOIN dbo.Categoria c on c.id = e.idCategoria AND c.excluido = 0 " +
-                        "WHERE e.id = @Id AND e.excluido = 0";
+                        "WHERE e.id = @Id AND e.excluido = 0" +
+                        "ORDER BY 3";
             var estabelecimento = await conexao.QueryFirstOrDefaultAsync<dynamic>(sql, new { Id = id });
 
             AutoMapper.Configuration.AddIdentifier(typeof(Estabelecimento), "id");
@@ -111,7 +113,7 @@ namespace fitcard_estabelecimentos.data.Repository
 
             var qtdeLinhasAfetadas = await conexao.ExecuteAsync(sql, new
             {
-                idCategoria = estabelecimento.IdCategoria,
+                idCategoria = estabelecimento.IdCategoria.Equals(Guid.Empty) ? null : estabelecimento.IdCategoria.ToString(),
                 razaoSocial = estabelecimento.RazaoSocial,
                 cnpj = estabelecimento.CNPJ,
                 nomeFantasia = estabelecimento.NomeFantasia,

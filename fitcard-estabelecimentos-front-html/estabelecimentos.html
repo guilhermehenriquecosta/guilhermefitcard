@@ -16,7 +16,6 @@
         <script type="text/javascript" src="./js/bootstrap.min.js"></script>
         <script type="text/javascript" src="./js/bootstrap-notify.min.js"></script>
         <script type="text/javascript" src="./js/jquery.mask.min.js"></script>
-        <script type="text/javascript" src="./js/estabelecimento.script.js"></script>
     </head>
     <body>
         <div style="position: relative; min-height: 100vh;">
@@ -190,7 +189,7 @@
                                         <label class="label_formulario" for="modalCriar-status">Status:</label>
                                         <!-- <input type="text" class="form-control" id="modalCriar-status" placeholder="Informe um status..."> -->
                                         <select id="modalCriar-status" class="form-control">
-                                            <option value="">Escolha um...</option>
+                                            <option value="0">Escolha um...</option>
                                         </select>
                                         <div class="invalid-feedback" id="modalCriar-status-feedback">O campo 'Status' é requerido.</div>
                                     </div>
@@ -326,9 +325,8 @@
                                 <div style="flex: 1 0 150px;">
                                     <div class="form-group form-group_formulario">
                                         <label class="label_formulario" for="modalEditar-status">Status:</label>
-                                        <!-- <input type="text" class="form-control" id="modalEditar-status" placeholder="Informe um status..."> -->
                                         <select id="modalEditar-status" class="form-control">
-                                            <option value="">Escolha um...</option>
+                                            <option value="0">Escolha um...</option>
                                         </select>
                                         <div class="invalid-feedback" id="modalEditar-status-feedback">O campo 'Status' é requerido.</div>
                                     </div>
@@ -473,5 +471,6 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="./js/estabelecimento.script.js"></script>
     </body>
 </html>

@@ -34,14 +34,13 @@ $(document).ready(function(){
         }
     })
 
-    const status = ['Ativo','Inativo'];
     let dropdownCriar = $('#modalCriar-status');
     let dropdownEditar = $('#modalEditar-status');
-    status.forEach(element => {
-        dropdownCriar.append($('<option></option>').attr('value', element.index).text(element));
-        dropdownEditar.append($('<option></option>').attr('value', element.index).text(element));
-        
-    });
+    const status = ['Ativo','Inativo'];
+    for (let i = 0; i < status.length; i++) {
+        dropdownCriar.append($('<option></option>').attr('value', i+1).text(status[i]));
+        dropdownEditar.append($('<option></option>').attr('value', i+1).text(status[i]));
+    }
 
     limparListagem();
     iniciarEstabelecimentos();
@@ -204,7 +203,8 @@ async function editarEstabelecimento(item) {
                 cache: 'default',
                 body: JSON.stringify(item)};
 
-    const URL = 'http://18.229.127.212:8009/api/v1/estabelecimento/'+item.id;
+    //const URL = 'http://18.229.127.212:8009/api/v1/estabelecimento/'+item.id;
+    const URL = 'https://localhost:44377/api/v1/estabelecimento/'+item.id;
     const resposta = await fetch(URL, myInit);
     return resposta;
 }
@@ -451,6 +451,7 @@ function limparModalCriar() {
     $('#modalCriar-agencia').val("");
     $('#modalCriar-conta').val("");
     $('#modalCriar-categoria').prop('selectedIndex', 0);
+    $('#modalCriar-status').prop('selectedIndex', 0);
     document.getElementById('modalCriar-cnpj').setCustomValidity("");
     document.getElementById('modalCriar-email').setCustomValidity("");
 }
@@ -470,6 +471,7 @@ function limparModalEditar() {
     $('#modalEditar-agencia').val("");
     $('#modalEditar-conta').val("");
     $('#modalEditar-categoria').prop('selectedIndex', 0);
+    $('#modalEditar-status').prop('selectedIndex', 0);
     document.getElementById('modalEditar-cnpj').setCustomValidity("");
     document.getElementById('modalEditar-email').setCustomValidity("");
 }
@@ -543,6 +545,7 @@ function preencherModalEditar(item) {
         if ($(this).text() === $('#modalEditar-categoria-nome').val())
             $('#modalEditar-categoria').prop('selectedIndex', $(this).index());
     });
+    $('#modalEditar-status').prop('selectedIndex', item.status);
 }
 
 function preencherModalDetalhar(item) {
@@ -575,7 +578,7 @@ function preencherModalDetalhar(item) {
     document.getElementById("modalDetalhar-estado").innerHTML = item.estado;
     document.getElementById("modalDetalhar-dataCadastro").innerHTML = item.dataCadastro != null ? dataCadastro.toLocaleDateString() : "";
     document.getElementById("modalDetalhar-categoria").innerHTML = categoria;
-    document.getElementById("modalDetalhar-status").innerHTML = item.status == null ? "" : status[item.status];
+    document.getElementById("modalDetalhar-status").innerHTML = (item.status == null || item.status == "0") ? "" : status[item.status-1];
     document.getElementById("modalDetalhar-agencia").innerHTML = agencia;
     document.getElementById("modalDetalhar-conta").innerHTML = conta;
     document.getElementById("modalDetalhar-dataCriacao").innerHTML = dataCriacao.toLocaleDateString() + " " + dataCriacao.toLocaleTimeString();
@@ -613,7 +616,7 @@ function preencherModalExcluir(item) {
     document.getElementById("modalExcluir-estado").innerHTML = item.estado;
     document.getElementById("modalExcluir-dataCadastro").innerHTML = item.dataCadastro != null ? dataCadastro.toLocaleDateString() : "";
     document.getElementById("modalExcluir-categoria").innerHTML = categoria;
-    document.getElementById("modalExcluir-status").innerHTML = item.status == null ? "" : status[item.status];
+    document.getElementById("modalExcluir-status").innerHTML = (item.status == null || item.status == "0") ? "" : status[item.status-1];
     document.getElementById("modalExcluir-agencia").innerHTML = agencia;
     document.getElementById("modalExcluir-conta").innerHTML = conta;
     document.getElementById("modalExcluir-dataCriacao").innerHTML = dataCriacao.toLocaleDateString() + " " + dataCriacao.toLocaleTimeString();

@@ -1,6 +1,5 @@
 ﻿using fitcard_estabelecimentos.data.Repository;
 using fitcard_estabelecimentos.domain.Domain;
-using fitcard_estabelecimentos.domain.Domain.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -60,7 +59,6 @@ namespace fitcard_estabelecimentos.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-                //return BadRequest(new ApiBadRequestResponse(ModelState));
 
             var id = await _estabelecimentoRepository.Insere(estabelecimento);
 
@@ -75,7 +73,6 @@ namespace fitcard_estabelecimentos.Controllers
         [ProducesResponseType(StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Atualiza([FromRoute]Guid id, [FromBody]Estabelecimento estabelecimento)
         {
             if (string.IsNullOrEmpty(id.ToString()))
@@ -83,7 +80,6 @@ namespace fitcard_estabelecimentos.Controllers
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-                //return BadRequest(new ApiBadRequestResponse(ModelState));
 
             var qtdlinhasAfetadas = await _estabelecimentoRepository.Edita(estabelecimento);
             if (qtdlinhasAfetadas != 1)

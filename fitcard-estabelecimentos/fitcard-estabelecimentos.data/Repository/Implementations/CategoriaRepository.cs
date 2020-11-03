@@ -27,7 +27,8 @@ namespace fitcard_estabelecimentos.data.Repository
                         "e.id 'Estabelecimentos_id', e.idCategoria 'Estabelecimentos_idCategoria', e.razaoSocial 'Estabelecimentos_razaoSocial', e.nomeFantasia 'Estabelecimentos_nomeFantasia', e.cnpj 'Estabelecimentos_cnpj', e.email 'Estabelecimentos_email', e.endereco 'Estabelecimentos_endereco', e.cidade 'Estabelecimentos_cidade', e.estado 'Estabelecimentos_estado', e.telefone 'Estabelecimentos_telefone', e.dataCadastro 'Estabelecimentos_dataCadastro', e.status 'Estabelecimentos_status', e.agencia 'Estabelecimentos_agencia', e.conta 'Estabelecimentos_conta', e.dataCriacao 'Estabelecimentos_dataCriacao', e.dataEdicao 'Estabelecimentos_dataEdicao', e.excluido 'Estabelecimentos_excluido' " +
                         "FROM dbo.Categoria c " +
                         "LEFT JOIN dbo.Estabelecimento e on e.idCategoria = c.id AND e.excluido = 0 " +
-                        "WHERE c.excluido = 0";
+                        "WHERE c.excluido = 0" +
+                        "ORDER BY 1";
 
             var categorias = await conexao.QueryAsync<dynamic>(sql);
 
@@ -47,7 +48,8 @@ namespace fitcard_estabelecimentos.data.Repository
                         "e.id 'Estabelecimentos_id', e.idCategoria 'Estabelecimentos_idCategoria', e.razaoSocial 'Estabelecimentos_razaoSocial', e.nomeFantasia 'Estabelecimentos_nomeFantasia', e.cnpj 'Estabelecimentos_cnpj', e.email 'Estabelecimentos_email', e.endereco 'Estabelecimentos_endereco', e.cidade 'Estabelecimentos_cidade', e.estado 'Estabelecimentos_estado', e.telefone 'Estabelecimentos_telefone', e.dataCadastro 'Estabelecimentos_dataCadastro', e.status 'Estabelecimentos_status', e.agencia 'Estabelecimentos_agencia', e.conta 'Estabelecimentos_conta', e.dataCriacao 'Estabelecimentos_dataCriacao', e.dataEdicao 'Estabelecimentos_dataEdicao', e.excluido 'Estabelecimentos_excluido' " +
                         "FROM dbo.Categoria c " +
                         "LEFT JOIN dbo.Estabelecimento e on e.idCategoria = c.id AND e.excluido = 0 " +
-                        "WHERE c.id = @Id AND c.excluido = 0";
+                        "WHERE c.id = @Id AND c.excluido = 0" +
+                        "ORDER BY 1";
             var categoria = await conexao.QueryFirstOrDefaultAsync<dynamic>(sql, new { Id = id });
 
             AutoMapper.Configuration.AddIdentifier(typeof(Categoria), "id");
