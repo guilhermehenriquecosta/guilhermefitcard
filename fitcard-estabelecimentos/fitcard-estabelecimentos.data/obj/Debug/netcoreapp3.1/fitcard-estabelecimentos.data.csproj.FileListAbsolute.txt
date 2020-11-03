@@ -1,0 +1,12 @@
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\bin\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.deps.json
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\bin\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.dll
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\obj\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.csprojAssemblyReference.cache
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\obj\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.AssemblyInfoInputs.cache
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\obj\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.AssemblyInfo.cs
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\bin\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.pdb
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\bin\Debug\netcoreapp3.1\fitcard-estabelecimentos.domain.dll
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\bin\Debug\netcoreapp3.1\fitcard-estabelecimentos.domain.pdb
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\obj\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.csproj.CopyComplete
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\obj\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.dll
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\obj\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.pdb
+F:\Projects\aspnet\fitcard-estabelecimentos\fitcard-estabelecimentos\fitcard-estabelecimentos.data\obj\Debug\netcoreapp3.1\fitcard-estabelecimentos.data.csproj.CoreCompileInputs.cache

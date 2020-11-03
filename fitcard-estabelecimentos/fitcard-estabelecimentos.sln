@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fitcard-estabelecimentos.api", "fitcard-estabelecimentos\fitcard-estabelecimentos.api.csproj", "{6E5FBCA3-DF44-4F75-9296-596320C9E000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fitcard-estabelecimentos.test", "fitcard-estabelecimentos.test\fitcard-estabelecimentos.test.csproj", "{37848358-B400-4243-AE99-A57220FAB913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fitcard-estabelecimentos.domain", "fitcard-estabelecimentos.domain\fitcard-estabelecimentos.domain.csproj", "{302D7F51-586E-4FAA-A15B-783F371BE916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fitcard-estabelecimentos.data", "fitcard-estabelecimentos.data\fitcard-estabelecimentos.data.csproj", "{D2990BE7-84C1-497B-B0FD-3F8C5377544C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E5FBCA3-DF44-4F75-9296-596320C9E000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E5FBCA3-DF44-4F75-9296-596320C9E000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E5FBCA3-DF44-4F75-9296-596320C9E000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E5FBCA3-DF44-4F75-9296-596320C9E000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37848358-B400-4243-AE99-A57220FAB913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37848358-B400-4243-AE99-A57220FAB913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37848358-B400-4243-AE99-A57220FAB913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37848358-B400-4243-AE99-A57220FAB913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302D7F51-586E-4FAA-A15B-783F371BE916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302D7F51-586E-4FAA-A15B-783F371BE916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302D7F51-586E-4FAA-A15B-783F371BE916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302D7F51-586E-4FAA-A15B-783F371BE916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2990BE7-84C1-497B-B0FD-3F8C5377544C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2990BE7-84C1-497B-B0FD-3F8C5377544C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2990BE7-84C1-497B-B0FD-3F8C5377544C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2990BE7-84C1-497B-B0FD-3F8C5377544C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFF45D03-BAF1-4BDE-9181-0713F68CFBC6}
+	EndGlobalSection
+EndGlobal
